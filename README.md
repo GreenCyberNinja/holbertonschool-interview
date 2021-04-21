@@ -1,1 +1,1 @@
-# holbertonschool-interview
+project directory for holbertonschool-interview
