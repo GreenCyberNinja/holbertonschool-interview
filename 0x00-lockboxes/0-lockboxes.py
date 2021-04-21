@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""checks if you can unlock all the boxes by process of elimination"""
+
+
 def canUnlockAll(boxes):
     keys = [0]
     box = len(boxes) - 1
