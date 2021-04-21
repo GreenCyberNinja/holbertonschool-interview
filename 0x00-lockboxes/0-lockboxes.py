@@ -11,7 +11,7 @@ def canUnlockAll(boxes):
                 if j not in set(keys):
                     keys.append(j)
         box -= 1
-    if len(set(keys)) == len(boxes):
+    if len(set(keys)) >= len(boxes):
         return True
     else:
         return False
