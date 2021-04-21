@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 def canUnlockAll(boxes):
-    for i in range(boxes):
+    for i in range(len(boxes)- 1):
         check = 0
-        for j in range(boxes[i]):
-            if j == i + 1:
+        print("loop")
+        for j in range(len(boxes[i])):
+            if boxes[i][j] == i + 1:
                 check = 1
                 break
         if check == 0:
-            return (false)
-    return (true)
+            return False
+    return True
