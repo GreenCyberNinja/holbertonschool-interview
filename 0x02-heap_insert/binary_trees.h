@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
-
+#include <stdbool.h>
 /**
  * struct binary_tree_s - Binary tree node
  *
@@ -15,14 +15,17 @@
  */
 typedef struct binary_tree_s
 {
-    int n;
-    struct binary_tree_s *parent;
-    struct binary_tree_s *left;
-    struct binary_tree_s *right;
-} binary_tree_t;
+	int n;
+	struct binary_tree_s *parent;
+	struct binary_tree_s *left;
+	struct binary_tree_s *right;
+} binary_tree_t, heap_t;
 
-typedef struct binary_tree_t heap_t;
-binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 void binary_tree_print(const binary_tree_t *);
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 heap_t *heap_insert(heap_t **root, int value);
+int count_nodes(heap_t *node);
+bool is_full(const heap_t *node);
+heap_t *find_parent(heap_t *root);
+void swap_nodes(heap_t **new_node);
 #endif
