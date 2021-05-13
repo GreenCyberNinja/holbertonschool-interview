@@ -3,7 +3,7 @@
 def minOperations(n):
     if n <= 1:
         return 0
-    ans = 1
+    ans = 0
     h = 1
     copa = 1
     while h != n:
