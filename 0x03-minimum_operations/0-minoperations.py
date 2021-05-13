@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def minOperations(n):
-    if n <= 1 or n != type(int):
+    if n <= 1:
         return 0
     ans = 1
     h = 1
