@@ -7,7 +7,7 @@ import re
 def codePrint(totalBytes, allCodes):
     """prints Allcodes if there are any"""
     print("File size: {:d}".format(totalBytes))
-    for key in sorted (allCodes.keys()):
+    for key in sorted(allCodes.keys()):
         if (allCodes[key]):
             print("{:s}: {:d}".format(key, allCodes[key]))
 
