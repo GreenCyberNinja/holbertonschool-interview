@@ -26,7 +26,7 @@ int slide_line(int *line, size_t size, int direction)
 		for(i = 0; i < size; i++)
 		{
 			if (line[i] != 0)
-				slideSucces += slide_left(line, i, size, &farSlide);
+				slideSucces += Lslide(line, i, size, &farSlide);
 		}
 	}
 	if (direction == SLIDE_RIGHT)
@@ -35,10 +35,10 @@ int slide_line(int *line, size_t size, int direction)
 		for(i = size - 1; i > 0; i--)
 		{
 			if (line[i] != 0)
-				slideSucces += slide_right(line, i, size, &farSlide);
+				slideSucces += Rslide(line, i, size, &farSlide);
 		}
 		if (line[i] != 0)
-			slideSucces += slide_right(line, i, size, &farSlide);
+			slideSucces += Rslide(line, i, size, &farSlide);
 	}
 	return (1);
 }
