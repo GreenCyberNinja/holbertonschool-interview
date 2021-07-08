@@ -24,4 +24,3 @@ def validUTF8(data):
                 return False
         NumBytes -= 1
     return NumBytes == 0
-    
