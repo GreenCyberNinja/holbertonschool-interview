@@ -9,7 +9,7 @@
 #define SLIDE_RIGHT 1
 
 int slide_line(int *line, size_t size, int direction);
-int slide_left(int *line, unsigned int starting_index, size_t size, unsigned int *farthest_slid);
-int slide_right(int *line, unsigned int starting_index, size_t size, unsigned int *farthest_slid);
+int Lslide(int *line, unsigned int starting_index, size_t size, unsigned int *farthest_slid);
+int Rslide(int *line, unsigned int starting_index, size_t size, unsigned int *farthest_slid);
 
 #endif /* SLIDE_H */
