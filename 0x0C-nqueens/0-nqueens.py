@@ -1,16 +1,20 @@
 #!/usr/bin/python3
 
+
 import sys
+
+
 boardcnt = 0
+
 
 def CheckBoard(board, row, col):
     """checks if queens can't attack each other"""
     for c in range(col):
         if (board[row][c] == 'Q'):
             return False
-    for r, c in zip(range(row-1,-1,-1), range(col-1, -1, -1)):
+    for r, c in zip(range(row-1, -1, -1), range(col-1, -1, -1)):
         if (board[r][c] == 'Q'):
-                return False
+            return False
     for r, c in zip(range(row+1, len(board), 1), range(col-1, -1, -1)):
         if (board[r][c] == 'Q'):
             return False
@@ -30,6 +34,7 @@ def SetNqueens(board, col):
                 SetNqueens(board, col + 1)
             board[row][col] = '.'
 
+
 def PrintBoard(board):
     """prints current queen coordinates"""
     pos = []
@@ -39,10 +44,11 @@ def PrintBoard(board):
                 pos.append([row, grid])
     print(pos)
 
+
 def main():
     """put it all together now"""
     board = []
-    if len(sys.argv) > 2:
+    if len(sys.argv) < 2:
         print("Usage: nqueens N")
         exit()
     try:
@@ -58,5 +64,6 @@ def main():
         board.append(row)
     SetNqueens(board, 0)
 
-    if __name__ == "__main__":
-        main()
+
+if __name__ == "__main__":
+    main()
