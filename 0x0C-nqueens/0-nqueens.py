@@ -57,7 +57,7 @@ def main():
         print('N must be a number')
         exit()
     if N < 4:
-        print('N Must be at least 4')
+        print('N must be at least 4')
         exit()
     for i in range(N):
         row = ["."] * N
