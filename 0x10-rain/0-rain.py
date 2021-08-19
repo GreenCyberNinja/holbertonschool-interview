@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""file for project Rain"""
 
 def rain(walls):
+    """calculates rain collected"""
     if walls == None:
         return (0)
     thud = 0
