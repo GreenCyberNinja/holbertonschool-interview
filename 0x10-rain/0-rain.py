@@ -25,4 +25,3 @@ def rain(walls):
         if wall == 0 and thud != 0:
             space += 1
     return rnwtr
-    
