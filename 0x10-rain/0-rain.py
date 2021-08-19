@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """file for project Rain"""
 
+
 def rain(walls):
     """calculates rain collected"""
-    if walls == None:
+    if walls is None:
         return (0)
     thud = 0
     smlstWl = 0
@@ -24,3 +25,4 @@ def rain(walls):
         if wall == 0 and thud != 0:
             space += 1
     return rnwtr
+    
