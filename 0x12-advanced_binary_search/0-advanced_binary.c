@@ -2,12 +2,12 @@
 
 
 /**
- * search - Searches for a value in a sorted array of integers
+ * FindVal - Searches for a value in a sorted array of integers
  *
  * @array: the array of integers
  * @size: the size of array
  * @val: int to find
- * @start: Start of index
+ * @st: Start of index
  * @end: End of index
  * Return: Index of value or -1 if not found
  */
