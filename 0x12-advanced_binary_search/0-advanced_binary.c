@@ -15,7 +15,7 @@ int FindVal(int *array, size_t size, int val, int st, int end)
 {
 	int i, mid;
 
-	if (array == NULL || size == 0 || start > end)
+	if (array == NULL || size == 0 || st > end)
 		return (-1);
 
 	printf("Searching in array: ");
