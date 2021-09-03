@@ -34,7 +34,7 @@ int FindVal(int *array, size_t size, int val, int st, int end)
 	}
 	if (array[mid] == val)
 		return (FindVal(array, size, val, st, mid));
-	if (array[mid] > value)
+	if (array[mid] > val)
 		return (FindVal(array, size, val, st, mid));
 	return (FindVal(array, size, val, mid + 1, end));
 }
