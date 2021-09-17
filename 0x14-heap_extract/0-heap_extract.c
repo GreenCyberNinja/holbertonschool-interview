@@ -8,31 +8,31 @@
 
 int heap_extract(heap_t **root)
 {
-    int val, hght;
-    heap_t *top;
+   int val, hght;
+   heap_t *top;
 
-    if (root == NULL || (*root) == NULL)
-        return (0);
+   if (root == NULL || (*root) == NULL)
+       return (0);
 
-    top = *root;
-    val = top->n;
+   top = *root;
+   val = top->n;
 
-    if (top->left == NULL && top->right)
-        *root = NULL;
-    else
-    {
-        hght = Gethght(*root, 1);
-        top = GetTop(*root, hght, 1);
-        (*root)->n = top->n;
-        if (top->parent->right == top)
-            top->parent->right = NULL;
-        else
-            top->parent->left = NULL;
-        Reheap(*root);
-    }
-    free(top);
+   if (top->left == NULL && top->right)
+       *root = NULL;
+   else
+   {
+       hght = Gethght(*root, 1);
+       top = GetTop(*root, hght, 1);
+       (*root)->n = top->n;
+       if (top->parent->right == top)
+           top->parent->right = NULL;
+       else
+           top->parent->left = NULL;
+       Reheap(*root);
+   }
+   free(top);
 
-    return (val);
+   return (val);
 }
 /**
  * Reheap - re heaps the heap after root is moved
