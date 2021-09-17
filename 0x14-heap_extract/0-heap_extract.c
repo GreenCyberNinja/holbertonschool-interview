@@ -103,5 +103,5 @@ heap_t *GetTop(heap_t *node, int hght, int NodeHght)
 	if (tmp != NULL)
 		return (tmp);
 
-	return (GeTop(node->left, hght, NodeHght + 1));
+	return (GetTop(node->left, hght, NodeHght + 1));
 }
