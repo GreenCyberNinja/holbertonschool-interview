@@ -22,7 +22,7 @@ int heap_extract(heap_t **root)
     else
     {
         hght = Gethght(*root, 1);
-        top = GetTop(*root, height, 1);
+        top = GetTop(*root, hght, 1);
         (*root)->n = top->n;
         if (top->parent->right == top)
             top->parent->right = NULL;
@@ -55,7 +55,7 @@ void Reheap(heap_t *node)
 		tmp = node->n;
 		node->n = max->n;
 		max->n = tmp;
-		heapify(max);
+		Reheap(max);
 	}
 }
 
@@ -70,7 +70,7 @@ int Gethght(heap_t *node, int hght)
     	int left, right;
 
 	if (node == NULL)
-		return (height - 1);
+		return (hght - 1);
 
 	hght++;
 	left = Gethght(node->left, hght);
@@ -99,9 +99,9 @@ heap_t *GetTop(heap_t *node, int hght, int NodeHght)
 		}
 		return (node->left);
 	}
-	tmp = get_top(node->right, hght, NodeHght + 1);
+	tmp = GetTop(node->right, hght, NodeHght + 1);
 	if (tmp != NULL)
 		return (tmp);
 
-	return (get_top(node->left, hght, NodeHght + 1));
+	return (GeTop(node->left, hght, NodeHght + 1));
 }
