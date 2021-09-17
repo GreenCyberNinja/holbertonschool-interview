@@ -67,7 +67,7 @@ void Reheap(heap_t *node)
  */
 int Gethght(heap_t *node, int hght)
 {
-    	int left, right;
+	int left, right;
 
 	if (node == NULL)
 		return (hght - 1);
@@ -89,7 +89,7 @@ int Gethght(heap_t *node, int hght)
  */
 heap_t *GetTop(heap_t *node, int hght, int NodeHght)
 {
-    	heap_t *tmp;
+		heap_t *tmp;
 
 	if (NodeHght >= hght - 1)
 	{
