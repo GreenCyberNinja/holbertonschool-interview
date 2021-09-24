@@ -103,6 +103,7 @@ char *Multiply(int a, int b, int size)
     char *product = malloc(sizeof(char) * size);
     int rem, i = 0;
     int c = a * b;
+    printf(%)
 
     if (c == 0)
     {
@@ -112,7 +113,12 @@ char *Multiply(int a, int b, int size)
     while (c != 0)
     {
         rem = c % 10;
-        product[i++] = (rem > 9)? (rem - 10) + 'a' : rem + '0';
+        if (rem >= 10) {
+            product[i++] = 65 + (rem - 10);
+        }
+        else {
+            product[i++] = 48 + rem;
+        }
         c = c / 10; 
     }
     product[i] = '\0';
