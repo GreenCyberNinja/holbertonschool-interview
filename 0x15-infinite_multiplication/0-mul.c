@@ -103,7 +103,7 @@ char *Multiply(int a, int b, int size)
     char *product = malloc(sizeof(char) * size);
     int rem, i = 0;
     int c = a * b;
-    printf(%)
+
 
     if (c == 0)
     {
