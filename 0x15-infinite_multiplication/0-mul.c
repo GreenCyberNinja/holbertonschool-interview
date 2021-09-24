@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
         _puts("Error\n");
         exit(98);
     }
-    ans = Multiply(_atoi(argv[1]), _atoi(argv[2]));
+    ans = Multiply(_atoi(argv[1]), _atoi(argv[2]), (_len(argv[1]) + _len(argv[2])));
     _puts(ans);
     _putchar('\n');
     free(ans);
@@ -98,9 +98,9 @@ int _atoi(char* str)
         ans = ans * 10 + str[i] - '0';
     return ans;
 }
-char *Multiply(int a, int b)
+char *Multiply(int a, int b, int size)
 {
-    char *product;
+    char *product = malloc(sizeof(char) * size);
     int rem, i = 0;
     int c = a * b;
 
