@@ -119,7 +119,7 @@ char *Multiply(char *a, char *b)
 		{
 			num2 = b[j] - '0';
 			if (product[infrnt1 + infrnt2] > 9)
-				product[i_n1 + i_n2] -= '0';
+				product[infrnt1 + infrnt2] -= '0';
 			sum = num1 * num2 + product[infrnt1 + infrnt2] + carried;
 			carried = sum / 10;
 			product[infrnt1 + infrnt2] = (sum % 10) + '0';
