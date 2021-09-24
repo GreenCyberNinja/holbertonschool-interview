@@ -104,7 +104,7 @@ char *Multiply(int a, int b, int size)
     int rem, i = 0;
     int c = a * b;
 
-
+    printf("%d", c);
     if (c == 0)
     {
         product[i++] = '0';
