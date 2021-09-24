@@ -9,6 +9,7 @@
 int main(int argc, char *argv[])
 {
     char *ans;
+    int l, i ;
 
     if (argc != 3 || IsNum(argv[1]) != 0 || IsNum(argv[2]) != 0)
     {
@@ -16,8 +17,24 @@ int main(int argc, char *argv[])
         exit(98);
     }
     ans = Multiply(argv[1], argv[2]);
-    _puts(ans);
-    _putchar('\n');
+    l = _len(ans);
+	l--;
+	while (product[l] == '0')
+	{
+		l--;
+	}
+	if (l == -1)
+	{
+		_putchar('0');
+		_putchar('\n');
+		return (0);
+	}
+	for (i = l; i >= 0; i--)
+	{
+		_putchar(product[i]);
+	}
+	_putchar('\n');
+
     free(ans);
     return (0);
 }
