@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
         _puts("Error\n");
         exit(98);
     }
-    ans = Multiply(_atoi(argv[1]), _atoi(argv[2]), (_len(argv[1]) + _len(argv[2])));
+    ans = Multiply(argv[1], argv[2]);
     _puts(ans);
     _putchar('\n');
     free(ans);
