@@ -98,30 +98,39 @@ int _atoi(char* str)
         ans = ans * 10 + str[i] - '0';
     return ans;
 }
-char *Multiply(int a, int b, int size)
+char *Multiply(char *a, char *b)
 {
-    char *product = malloc(sizeof(char) * size);
-    int rem, i = 0;
-    int c = a * b;
+ 	int l1 = _len(a);
+	int l2 = _len(b);
+	int i, j, num1, num2, infrnt1 = 0, infrnt2 = 0;
+	int carried = 0, sum = 0;
+	char *product = malloc(sizeof(char) * (l1 + l2));
 
-    printf("%d", c);
-    if (c == 0)
-    {
-        product[i++] = '0';
-        product[i] = '\0';
-    }
-    while (c != 0)
-    {
-        rem = c % 10;
-        if (rem >= 10) {
-            product[i++] = 65 + (rem - 10);
-        }
-        else {
-            product[i++] = 48 + rem;
-        }
-        c = c / 10; 
-    }
-    product[i] = '\0';
+	for (i = 0; i < (l1 + l2); i++)
+	{
+		product[i] = '0';
+	}
+	for (i = l1 - 1; i >= 0; i--)
+	{
+		carried = 0;
+		num1 = a[i] - '0';
+		infrnt2 = 0;
+		for (j = l2 - 1; j >= 0; j--)
+		{
+			num2 = b[j] - '0';
+			if (product[infrnt1 + infrnt2] > 9)
+				product[i_n1 + i_n2] -= '0';
+			sum = num1 * num2 + product[infrnt1 + infrnt2] + carried;
+			carried = sum / 10;
+			product[infrnt1 + infrnt2] = (sum % 10) + '0';
+			infrnt2++;
+		}
+		if (carried > 0)
+		{
+			product[infrnt1 + infrnt2] += carried;
+		}
+		infrnt1++;
+	}
     RevString(product);
     return (product);
 }

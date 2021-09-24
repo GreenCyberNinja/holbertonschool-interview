@@ -10,6 +10,6 @@ int IsNum(char *str);
 int _len(char *str);
 int _atoi(char* str);
 void RevString(char *str);
-char *Multiply(int a, int b, int size);
+char *Multiply(char * a, char *b);
 
 #endif
