@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     ans = Multiply(argv[1], argv[2]);
     l = _len(ans);
 	l--;
-	while (product[l] == '0')
+	while (ans[l] == '0')
 	{
 		l--;
 	}
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = l; i >= 0; i--)
 	{
-		_putchar(product[i]);
+		_putchar(ans[i]);
 	}
 	_putchar('\n');
 
