@@ -9,7 +9,6 @@
 int main(int argc, char *argv[])
 {
     char *ans;
-    int len, i;
 
     if (argc != 3 || IsNum(argv[1]) != 0 || IsNum(argv[2]) != 0)
     {
@@ -17,6 +16,7 @@ int main(int argc, char *argv[])
         exit(98);
     }
     ans = Multiply(_atoi(argv[1]), _atoi(argv[2]));
+    _puts(ans);
     _putchar('\n');
     free(ans);
     return (0);
@@ -92,9 +92,10 @@ void RevString(char *str)
 int _atoi(char* str)
 {
     int ans = 0;
+    int i;
 
-    for(int i = 0; str[i] != '\0'; ++i)
-        ans = ans * 10 + str[i] = '0';
+    for(i = 0; str[i] != '\0'; ++i)
+        ans = ans * 10 + str[i] - '0';
     return ans;
 }
 char *Multiply(int a, int b)
