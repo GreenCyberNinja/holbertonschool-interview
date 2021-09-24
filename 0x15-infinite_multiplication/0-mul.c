@@ -148,6 +148,6 @@ char *Multiply(char *a, char *b)
 		}
 		infrnt1++;
 	}
-    RevString(product);
+
     return (product);
 }
