@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""Rotate matrix method file"""
 
 def rotate_2d_matrix(matrix):
+    """Rotates a 2d matrix clockwise"""
     N = len(matrix)
     for x in range(0, int(N / 2)):
 		
