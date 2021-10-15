@@ -31,7 +31,7 @@ void RecursiveSort(int *ar, size_t size, int *tmp)
 	{
 		RecursiveSort(ar, size / 2, tmp);
 		RecursiveSort(ar + size / 2, size - size / 2, tmp);
-		merge(ar, size, size / 2, tmp);
+		PrintMerging(ar, size, size / 2, tmp);
 	}
 }
 
