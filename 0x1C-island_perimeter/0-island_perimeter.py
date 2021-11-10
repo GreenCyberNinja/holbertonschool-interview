@@ -4,6 +4,7 @@
 
 def island_perimeter(grid):
     """finds the perimeter of island in list of lists"""
+    
     land = 0
     x = 0
     y = 0
@@ -12,7 +13,8 @@ def island_perimeter(grid):
             if i == 1:
                 land += 1
         if land > 1:
-            x += land
+            if land > x or x == 0:
+                x = land
             y += 1
             land = 0
         else:
