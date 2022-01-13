@@ -3,12 +3,12 @@
 /**
  * find_substring - finds all the possible substrings
  * containing a list of words, within a given string
- * 
+ *
  * @s: the string to search through
  * @words: the array of words to search for
  * @nb_words: the number of words in the list
  * @n: holds the address  to store the number of words found
- * 
+ *
  * Return: an allocated array of indexes in s where the
  * where the words are found or NULL if none are found
  */
@@ -51,7 +51,7 @@ int *find_substring(char const *s, char const **words, int nb_words, int *n)
  * @s: the string to search through
  * @words: the array of words to search for
  * @nb_words: the number of words in the list
- * @wordLen: the length the length in words
+ * @wrdLen: the length the length in words
  * Return: True if full match, false if not
  */
 bool IsSubStrmatch(char const *s, char const **words, int nb_words, int wrdLen)
@@ -110,7 +110,7 @@ bool check_word(char const *str, char const *word)
  * check_array - checks if ans is in array arr
  * @arr: an array of int to check
  * @len: length of arr
- * @ans: the value to check for
+ * @val: the value to check for
  * Return: true if val is in arr false if not
  */
 bool check_array(int *arr, int len, int val)
