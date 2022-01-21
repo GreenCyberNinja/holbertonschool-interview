@@ -1,0 +1,1 @@
+project directory for interview problem 0x22 prime game
